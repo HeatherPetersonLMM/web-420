@@ -57,13 +57,13 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
-© 2018 GitHub, Inc.
+ 2018 , Inc.
 Terms
 Privacy
 Security
 Status
 Help
-Contact GitHub
+Contact
 API
 Training
 Shop
