@@ -1,3 +1,14 @@
+/*
+============================================
+; Title:  API Gateway Part II
+; Author: Professor Krasso 
+; Date:   16 May 2018
+; Modified By: Heather Peterson
+; Description: Assignment 2.3
+;===========================================
+*/ 
+
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
