@@ -14,10 +14,18 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var mongoose = require('mongoose');
+mongoose.Promise = require('bluebird');
+var apiCatalog = require('./routes/api-catalog');
 
 var indexRouter = require('./routes/index');
 
 var app = express();
+
+mongoose.connect('mongodb://admin:admin@ds123770.mlab.com:23770/api-gateway',{
+promiseLibrary: require('bluebird')
+}).then (() =>console.log('connection successful'))
+.catch((err) =>console.log(err));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -28,6 +36,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/api', apiCatalog);
 
 app.use('/', indexRouter);
 
@@ -48,3 +57,15 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+© 2018 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+API
+Training
+Shop
+Blog
+About
