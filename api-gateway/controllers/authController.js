@@ -8,6 +8,12 @@
 ;===========================================
 */ 
 
+// Require statements
+var User = require('../models/user');
+var jwt = require('jsonwebtoken');
+var bcrypt = require('bcryptjs');
+var config = require('../config');
+
 // Register a new user on POST - user_register()
 exports.user_register = function(req, res){
 

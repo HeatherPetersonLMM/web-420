@@ -17,10 +17,6 @@ var logger = require('morgan');
 var mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
 var apiCatalog = require('./routes/api-catalog');
-var User = require('../models/user');
-var jwt = require('jsonwebtoken');
-var bcrypt = require('bcryptjs');
-var config = require('../config');
 
 var indexRouter = require('./routes/index');
 
