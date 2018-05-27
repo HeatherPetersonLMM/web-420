@@ -7,7 +7,10 @@
 ; Description: Assignment 2.3
 ;===========================================
 */ 
-
+var User = require('../models/user');
+var jwt = require('jsonwebtoken');
+var bcrypt = require('bcryptjs');
+var config = require('../config');
 var express = require('express');
 var router = express.Router();
 var auth_controller = require('../controllers/authController');
