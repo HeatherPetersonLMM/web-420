@@ -57,15 +57,3 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
- 2018 , Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact
-API
-Training
-Shop
-Blog
-About
