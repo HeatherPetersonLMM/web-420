@@ -8,20 +8,6 @@
 ;===========================================
 */ 
 
-// Require statements
-var User = require('../models/user');
-var jwt = require('jsonwebtoken');
-var bcrypt = require('bcryptjs');
-var config = require('../config');
-
-exports.user_register = function(req, res){
-    res.send('NOT IMPLEMENTED: User Registration POST');
-};
-
-exports.user_token = function(req, res){
-    res.send('NOT IMPLEMENTED: User Token Lookup GET');
-};
-
 // Register a new user on POST - user_register()
 exports.user_register = function(req, res){
 

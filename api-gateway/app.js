@@ -1,10 +1,10 @@
 /*
 ============================================
-; Title:  API Gateway Part II
+; Title:  API Gateway Part III
 ; Author: Professor Krasso 
-; Date:   16 May 2018
+; Date:   25 May 2018
 ; Modified By: Heather Peterson
-; Description: Assignment 2.3
+; Description: Assignment 4.3
 ;===========================================
 */ 
 
@@ -17,6 +17,10 @@ var logger = require('morgan');
 var mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
 var apiCatalog = require('./routes/api-catalog');
+var User = require('../models/user');
+var jwt = require('jsonwebtoken');
+var bcrypt = require('bcryptjs');
+var config = require('../config');
 
 var indexRouter = require('./routes/index');
 
