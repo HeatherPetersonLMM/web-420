@@ -1,11 +1,11 @@
 
 /*
 ============================================
-; Title:  API Gateway Part II
+; Title:  API Gateway Part III
 ; Author: Professor Krasso 
-; Date:   16 May 2018
+; Date:   25 May 2018
 ; Modified By: Heather Peterson
-; Description: Assignment 2.3
+; Description: Assignment 4.3
 ;===========================================
 */ 
 
@@ -20,6 +20,9 @@ var userSchema = new mongoose.Schema ({
 
 module.exports = mongoose.model ('User', userSchema);
 
+/** Database queries
+ */
+
 // user.save is used to add a new user in our database
 module.exports.add = (user, callback) => {
     user.save(callback);
@@ -30,6 +33,3 @@ module.exports.getById = (id, callback) => {
     var query = {_id: id};
     User.findById(query, callback);
 };
-
-/** Database queries
- */

@@ -1,10 +1,10 @@
 /*
 ============================================
-; Title:  API Gateway Part II
+; Title:  API Gateway Part IIIII
 ; Author: Professor Krasso 
-; Date:   16 May 2018
+; Date:   25 May 2018
 ; Modified By: Heather Peterson
-; Description: Assignment 2.3
+; Description: Assignment 4.3
 ;===========================================
 */ 
 
@@ -13,6 +13,14 @@ var User = require('../models/user');
 var jwt = require('jsonwebtoken');
 var bcrypt = require('bcryptjs');
 var config = require('../config');
+
+exports.user_register = function(req, res){
+    res.send('NOT IMPLEMENTED: User Registration POST');
+};
+
+exports.user_token = function(req, res){
+    res.send('NOT IMPLEMENTED: User Token Lookup GET');
+};
 
 // Register a new user on POST - user_register()
 exports.user_register = function(req, res){
